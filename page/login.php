@@ -1,0 +1,25 @@
+
+        <main class="main">
+            <section class="head">
+                <h2 class="head__title">Вход в систему</h2>
+                <p class="head__date">Сегодня 03 Март 2020 год</p>
+            </section>
+            
+            <? if($_GET['error']): ?>
+                <p>Неверный логин или пароль</p>
+            <? endif; ?>
+ 
+            <form action="../include/user-auth.php" class="form" method="post">
+                <label class="form__label">
+                    
+                    <input type="text" class="form__input" name="login" autocomplete="off">
+                </label>
+                <label class="form__label">
+                   
+                    <input type="password" class="form__input" name="pass">
+                    <button type="button" class="form__eye"><i class="far fa-eye-slash"></i></button>
+                </label>
+                <button class="form__btn">Вход</button>
+            </form>
+        </main>
+ 
